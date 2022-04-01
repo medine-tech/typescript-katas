@@ -1,5 +1,5 @@
-Typescript katas
+# Typescript katas
 
--- AdventJs
-    cd adventjs/frontend
-    npm run install
+## AdventJs
+    1. cd adventjs/frontend
+    2. npm run install
