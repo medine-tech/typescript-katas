@@ -3,8 +3,8 @@ interface ISheep {
   color: string
 }
 
-export const filterSheeps = (sheeps: Array<ISheep>): Array<ISheep> => {
-  return sheeps.filter((sheep: ISheep) => {
+export const filterSheep = (sheep: Array<ISheep>): Array<ISheep> => {
+  return sheep.filter((sheep: ISheep) => {
     const name = sheep.name.trim().toLowerCase()
 
     return sheep.color === "rojo" && name.includes("a") && name.includes("n")
