@@ -8,10 +8,7 @@ describe("Test in sumPairs", () => {
 
     const response = sumPairs(data, result)
 
-    console.log("test: ", response)
-
     expect(response).toEqual([3, 7])
-    // expect(response?.length).toBe(2)
   })
 
   test("should return an array two values", () => {
@@ -19,9 +16,6 @@ describe("Test in sumPairs", () => {
     const result = 6
 
     const response = sumPairs(data, result)
-
-    console.log("test: ", response)
-
     expect(response).toEqual([1, 5])
   })
 
@@ -30,8 +24,6 @@ describe("Test in sumPairs", () => {
     const result = 10
 
     const response = sumPairs(data, result)
-
-    console.log("test: ", response)
 
     expect(response).toEqual(null)
   })
