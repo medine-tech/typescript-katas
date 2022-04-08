@@ -42,8 +42,6 @@ describe("Test in sumPairs", () => {
 
     const response = sumPairs(data, result)
 
-    console.log("test: ", response)
-
     expect(response).toEqual([2, 2])
   })
 
@@ -52,8 +50,6 @@ describe("Test in sumPairs", () => {
     const result = 8
 
     const response = sumPairs(data, result)
-
-    console.log("test: ", response)
 
     expect(response).toEqual([6, 2])
   })
