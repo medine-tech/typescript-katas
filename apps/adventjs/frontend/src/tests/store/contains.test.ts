@@ -1,7 +1,7 @@
 import { describe, expect, test } from "vitest"
 import { contains } from "../../store/contains"
 
-describe("test0", () => {
+describe("Testing validate contains", () => {
     const almacen = {
         'estanteria1': {
           'cajon1': {
@@ -19,11 +19,25 @@ describe("test0", () => {
         }
       }
 
+    const otroAlmacen = {
+        'baul': {
+            'fondo': {
+                'objeto': 'cd-rom',
+                'otro-objeto': 'disquette',
+                'otra-cosa': 'mando'
+            }
+        }
+    }
 
+    test("it should the product exist", () => {
+        const existProduct = contains(almacen, 'camiseta');
 
-    test("it should", () => {
-        const exitProduct = contains(almacen, 'camiseta');
+        expect(existProduct).toBe(true);
+    })
 
-        console.log('here',exitProduct)
+    test("it should the product not exist", () => {
+        const existProduct = contains(otroAlmacen, 'gameboy');
+
+        expect(existProduct).toBe(false);
     })
 })
