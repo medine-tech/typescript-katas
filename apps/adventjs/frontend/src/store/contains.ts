@@ -11,6 +11,7 @@ const iterate = (object: any) => {
     return result;
 }
 
+
 export const contains = (store: any, product: string) => { 
    return iterate(store).some(item => item === product);
     
