@@ -1,8 +1,8 @@
 import { describe, expect, test } from "vitest"
-import { filterSheeps } from "../Sheeps/countSheeps"
+import { filterSheep } from "../sheep/countSheep"
 
-describe("countSheeps test", () => {
-  const sheeps = [
+describe("countSheep test", () => {
+  const sheep = [
     { name: "Noa", color: "azul" },
     { name: "Euge", color: "rojo" },
     { name: "Navidad", color: "rojo" },
@@ -11,21 +11,21 @@ describe("countSheeps test", () => {
     { name: "Nnnnnnnn", color: "rojo" },
   ]
 
-  const expectedSheeps = [
+  const expectedSheep = [
     { name: "Navidad", color: "rojo" },
     { name: "Ki Na Ma", color: "rojo" },
   ]
 
   test("it should return a valid value", () => {
-    const filteredSheeps = filterSheeps(sheeps)
+    const filteredSheep = filterSheep(sheep)
 
-    expect(filteredSheeps).toEqual(expectedSheeps)
+    expect(filteredSheep).toEqual(expectedSheep)
   })
 
   test("it should return null", () => {
-    const sheeps = [{ name: "ee", color: "yellow" }]
-    const filteredSheeps = filterSheeps(sheeps)
+    const sheep = [{ name: "ee", color: "yellow" }]
+    const filteredSheep = filterSheep(sheep)
 
-    expect(filteredSheeps).toEqual([])
+    expect(filteredSheep).toEqual([])
   })
 })

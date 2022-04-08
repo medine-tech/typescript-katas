@@ -1,0 +1,9 @@
+{
+    "name": "typescript-katas",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "adventjs-install": "cd apps/adventjs/frontend && npm install",
+        "adventjs-test": "cd apps/adventjs/frontend && npm run test"
+    }
+}
