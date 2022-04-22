@@ -20,7 +20,7 @@ describe("Testing groupBy.ts", () => {
   test("it should valida case four", () => {
     const value = groupBy(
       [1397639141184, 1363223700000],
-      timestamp => new Date(timestamp).getFullYear()
+      (timestamp: number) => new Date(timestamp).getFullYear()
     )
     expect(value).toEqual({ 2013: [1363223700000], 2014: [1397639141184] })
   })
