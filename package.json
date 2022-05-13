@@ -4,7 +4,7 @@
         "apps/adventjs/frontend"
     ],
     "scripts": {
-        "adventjs-lint": "npm run lint --workspace=apps/adventjs/frontend",
+        "lint": "eslint",
         "adventjs-test": "npm run test --workspace=apps/adventjs/frontend"
     },
     "devDependencies": {
