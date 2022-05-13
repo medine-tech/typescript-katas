@@ -14,8 +14,8 @@ jobs:
           node-version: 16
       - name: install
         run: |
-          npm ci
-          npm ci --workspace=apps/adventjs/frontend
+          npm install
+          npm install --workspace=apps/adventjs/frontend
 
       - name: lint
         run: |
