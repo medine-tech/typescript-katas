@@ -19,7 +19,7 @@ jobs:
 
       - name: lint
         run: |
-          npm run adventjs-lint
+          npm run lint
 
       - name: test
         run: |
