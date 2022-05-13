@@ -1,5 +1,5 @@
 const fixFiles = (files: Array<string>): Array<string> => {
-  const groupBy = (collection) => {
+  const groupBy = (collection: Array<string>) => {
     return collection.reduce((result, value, key) => {
       const originalKey = key
       key = value
@@ -18,6 +18,7 @@ const fixFiles = (files: Array<string>): Array<string> => {
   }
 
   const filesGrouped = groupBy(files)
+  console.log(filesGrouped, "files grouped")
 
   return files.map((file, index) => {
     if (filesGrouped[file].length > 1) {
