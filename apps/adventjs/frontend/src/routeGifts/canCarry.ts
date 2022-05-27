@@ -1,18 +1,19 @@
 const canCarry = (capacity :number, trips : Array<Array<number>>) => {
-    const capacitys : number = capacity
-    let deliver = 0
-    let gifts = 0
-    let getGifs = 0
 
-    for (const trip of trips){
-        const gift = trip[0]
-        getGifs = trip[1]
-        gifts += trip[0]
+    const stopMax = Math.max(...trips.reduce((acc, item) => {return [...acc , item[2]]}))
 
-        if(gift > capacitys || gifts > capacitys && deliver > getGifs)
-        return false
+    let gifts = 0;
 
-        deliver = trip[2]
+    for (let i = 0;  i <= stopMax; i++){
+
+        for (const trip of trips )
+        {
+            if(i === trip[1]) gifts += trip[0]
+
+            if(i === trip[2]) gifts -= trip[0]
+        }
+
+        if(gifts > capacity) return false
     }
 
     return true
