@@ -24,6 +24,7 @@
   "dependencies": {},
   "packageManager": "npm@9.6.2",
   "overrides": {
-    "@babel/traverse": "^7.23.2"
+    "@babel/traverse": "^7.23.2",
+    "minimatch": "3.1.5"
   }
 }
